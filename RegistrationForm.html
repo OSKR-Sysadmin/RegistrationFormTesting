@@ -1,0 +1,36 @@
+<html>
+
+<script src="https://awm--dev.sandbox.my.site.com/anzacRegistrationForm/lightning/lightning.out.js"></script>
+
+<div data-lightning-out="true"></div>
+
+  <script>
+
+    const appName = 'c:awmRegistrationFormApp';
+    const componentName = 'c:AwmRegistrationAnzacDayParade';
+    const lightningEndpoint = 'https://awm--dev.sandbox.my.site.com/anzacRegistrationForm';
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {
+
+    };
+
+    $Lightning.use(
+            appName,
+            function (){
+              $Lightning.createComponent(
+                      componentName,
+                      componentAttributes,
+                      targetElement,
+                      function (cmp){
+                        console.log('lightning component created');
+                      }
+              );
+            },
+            lightningEndpoint
+    );
+
+
+  </script>
+
+
+</html>
