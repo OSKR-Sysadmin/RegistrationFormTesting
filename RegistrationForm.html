@@ -13,6 +13,11 @@
     const componentAttributes = {
          eventName : 'Anzac Day March Registration'
     };
+
+    document.addEventListener('lightning__showtoast', event => {
+      sforce.one.showToast(event.toastAttributes);
+    });
+
     
     $Lightning.use(
             appName,
